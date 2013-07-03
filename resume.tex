@@ -1,0 +1,83 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+% possible options include:
+%   - font size ('10pt', '11pt' and '12pt');
+%   - paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape');
+%   - font family ('sans' and 'roman').
+\documentclass[10pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+
+\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+\geometry{bottom=1cm}
+\geometry{top=2cm}
+\setlength{\hintscolumnwidth}{4.5cm}           % if you want to change the width of the column with the dates
+%\setlength{\maketitlenamewidth}{10cm}        % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+% personal data
+\firstname{Artem}
+\familyname{Roma}
+
+\begin{document}
+
+\makecvtitle
+
+\section{Personal}
+
+\cvitem{Phone (cell)}{+380 (50) 047 08 91}
+\cvitem{E-mail}{stud.ars@gmail.com}
+\cvitem{GTalk}{stud.ars@gmail.com}
+\cvitem{Skype}{luiwampa}
+
+\section{Education}
+\cventry{2008--2012}{BSc in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
+\cventry{2012--2013}{Specialist degree in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
+
+\subsection{Additional trainings}
+
+\cventry{October March 2013--June 2013}
+            {Cloud Systems Techologies}{Mirantis}{Kharkiv}{}
+
+\cventry{September 2012--present}
+            {English language training courses}{American English Center}{Kharkiv}{}{}
+
+\section{Experience}
+
+\subsection{Vocational}
+\cventry{February 2013--present}{Python Software Engineer}{Speedflow}{Kharkiv}{}
+        {Business logic in web application with three-tier architecture}
+
+\section{Languages}
+\cvitemwithcomment{English}{Intermediate}{}
+\cvitemwithcomment{German}{Starter}{}
+\cvitemwithcomment{Russian}{Native}{}
+\cvitemwithcomment{Ukrainian}{Native}{}
+
+\section{Computer skills}
+\cvitem{Programming languages}{Python, C++, Bash}
+\cvitem{OS}{GNU/Linux(Debian based), MS Windows}
+\cvitem{Databases}{SQL, Redis}
+\cvitem{VCS}{Svn, Git}
+\cvitem{Libraries and frameworks}{Python standart modules (urllib, math, logging etc.), Trafaret, SQLAlchemy, PySide}
+\cvitem{Tools}{Vim, \LaTeX}
+
+\section{Interests}
+
+Scripting programming, network management, GNU/Linux administration, open-source projects
+
+\end{document}
