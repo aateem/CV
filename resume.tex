@@ -29,9 +29,12 @@
 \setlength{\hintscolumnwidth}{4.5cm}           % if you want to change the width of the column with the dates
 %\setlength{\maketitlenamewidth}{10cm}        % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 
+% reload hyperref package with needed options
+\usepackage[unicode,colorlinks]{hyperref}
+
 % personal data
-\firstname{Artem}
-\familyname{Roma}
+\name{Artem}{Roma}
+\photo[120pt][1pt]{photo}
 
 \begin{document}
 
@@ -46,8 +49,11 @@
 \section{Contacts}
 
 \cvitem{Phone (cell)}{+380 (50) 047 08 91}
-\cvitem{E-mail}{fuzzy.finder@gmail.com}
+\cvitem{E-mail}{\href{mailto:fuzzy.finder@gmail.com}{fuzzy.finder@gmail.com}}
 \cvitem{Skype ID}{luiwampa}
+\cvitem{LinkedIn}{\href{https://goo.gl/6h5BGx}{artem-roma}}
+\cvitem{GitHub}{\href{https://github.com/aateem}{aateem}}
+
 
 \section{Education}
 \cventry{2008--2012}{BSc in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
@@ -65,10 +71,36 @@
 
 \subsection{Vocational}
 \cventry{February 2013--July 2013}{Python Software Engineer}{Speedflow}{Kharkiv}{}
-        {Developing and supporting of the business logic for "Mediacore" project}
+        {Developing and supporting of the business logic for Mediacore project}
 
 \cventry{July 2013--present}{Python Software Engineer}{Mirantis}{Kharkiv}{}
-        {Developing of the FUEL project and its supplementaries.}
+        {Developing of the Fuel project and its supplementaries}
+
+\section{Projects and responsibilities}
+
+\subsection{\href{http://speedflow.com/en/mediacore/overview}{Mediacore}}
+\cvitem{Description}
+        {VoIP class 4 softswitch}
+\cvitem{Responsibilities}
+        {Developing and supporting of backend part of the project}
+
+\subsection{\href{https://github.com/stackforge/fuel-ostf}{OSTF}}
+\cvitem{Description}
+        {OpenStack Testing Framework. Plugin for Fuel cloud management service that verifies OpenStack installation}
+\cvitem{Responsibilities}
+        {Developing and supporting of the tests' executor part. Code review}
+
+\subsection{\href{https://www.mirantis.com/products/mirantis-openstack-software/openstack-deployment-fuel/}{Fuel}}
+\cvitem{Description}
+        {OpenStack cloud management framework}
+\cvitem{Responsibilities}
+        {Developing and supporting of the \href{https://github.com/stackforge/fuel-web}{Fuel-Web} part. Code review}
+
+\subsection{\href{https://github.com/stackforge/python-fuelclient}{Fuel-pythonclient}}
+\cvitem{Description}
+        {CLI for Fuel framework}
+\cvitem{Responsibilities}
+        {Supporting of the project's code. Code review}
 
 \section{Languages}
 \cvitemwithcomment{English}{Intermediate}{}
