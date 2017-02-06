@@ -1,106 +1,63 @@
-%% start of file `template.tex'.
-%% Copyright 2006-2012 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
-
 % possible options include:
 %   - font size ('10pt', '11pt' and '12pt');
 %   - paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape');
 %   - font family ('sans' and 'roman').
-\documentclass[10pt,a4paper,sans]{moderncv}
+\documentclass[11pt,a4paper,sans]{moderncv}
 
 % moderncv themes
 \moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
-%\renewcommand{\familydefault}{\sfdefault}    % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+% use custom skype icon, as \social collection does not
+% include it
+\newsavebox{\skypeicon}
+\savebox{\skypeicon}{\includegraphics[height=.8\baselineskip]{skype_grey.png}}
+\newcommand{\skypesocialsymbol}{\usebox{\skypeicon}}
 
-\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
-
-% character encoding
-\usepackage[utf8]{inputenc}                  % if you are not using xelatex ou lualatex, replace by the encoding you are using
 
 % adjust the page margins
-\usepackage[scale=0.8]{geometry}
-\geometry{bottom=1cm}
-\geometry{top=2cm}
-\setlength{\hintscolumnwidth}{4.5cm}           % if you want to change the width of the column with the dates
-%\setlength{\maketitlenamewidth}{10cm}        % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+\usepackage[scale=0.75]{geometry}
+
+\name{Artem}{Roma}
+\title{Python/Golang Software Engineer}
+\address{Kharkiv}{Ukraine}
+\phone[mobile]{+380~(500)~470~891}
+\email{fuzzy.finder@gmail.com}
+\social[linkedin]{artem-roma}
+\social[github]{aateem}
+\extrainfo{\skypesocialsymbol~luiwampa}
+\photo[120pt][1pt]{photo.jpg}
 
 % reload hyperref package with needed options
 \usepackage[unicode,colorlinks]{hyperref}
 
-% personal data
-\name{Artem}{Roma}
-\photo[120pt][1pt]{photo}
-
 \begin{document}
 
 \makecvtitle
-
-\section{Personal information}
-
-\cvitem{Name}{Artem Roma}
-\cvitem{Location}{Kharkiv, Ukraine}
-\cvitem{Date of Birth}{August 16, 1991}
-
-\section{Contacts}
-
-\cvitem{Phone (cell)}{+380 (50) 047 08 91}
-\cvitem{E-mail}{\href{mailto:fuzzy.finder@gmail.com}{fuzzy.finder@gmail.com}}
-\cvitem{Skype ID}{luiwampa}
-\cvitem{LinkedIn}{\href{https://goo.gl/6h5BGx}{artem-roma}}
-\cvitem{GitHub}{\href{https://github.com/aateem}{aateem}}
-
 
 \section{Education}
 \cventry{2008--2012}{BSc in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
 \cventry{2012--2013}{Specialist degree in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
 
 \subsection{Additional trainings}
-
-\cventry{March 2013--June 2013}
-            {Cloud Systems Techologies}{Mirantis}{Kharkiv}{}{}
-
-\cventry{September 2012--July 2013}
-            {English language training courses}{American English Center}{Kharkiv}{}{}
+\cventry{2013}{Cloud Systems Techologies}{Mirantis}{Kharkiv}{}{}
+\cventry{2012--2013}{English language training courses}{American English Center}{Kharkiv}{}{}
 
 \section{Experience}
 
 \subsection{Vocational}
-\cventry{February 2013--July 2013}{Python Software Engineer}{Speedflow}{Kharkiv}{}
-        {Developing and supporting of the business logic for Mediacore project}
-
-\cventry{July 2013--present}{Python Software Engineer}{Mirantis}{Kharkiv}{}
-        {Developing of the Fuel project and its supplementaries}
-
-\section{Projects and responsibilities}
-
-\subsection{\href{http://speedflow.com/en/mediacore/overview}{Mediacore}}
-\cvitem{Description}
-        {VoIP class 4 softswitch}
-\cvitem{Responsibilities}
-        {Developing and supporting of backend part of the project}
-
-\subsection{\href{https://github.com/stackforge/fuel-ostf}{OSTF}}
-\cvitem{Description}
-        {OpenStack Testing Framework. Plugin for Fuel cloud management service that verifies OpenStack installation}
-\cvitem{Responsibilities}
-        {Developing and supporting of the tests' executor part. Code review}
-
-\subsection{\href{https://www.mirantis.com/products/mirantis-openstack-software/openstack-deployment-fuel/}{Fuel}}
-\cvitem{Description}
-        {OpenStack cloud management framework}
-\cvitem{Responsibilities}
-        {Developing and supporting of the \href{https://github.com/stackforge/fuel-web}{Fuel-Web} part. Code review}
-
-\subsection{\href{https://github.com/stackforge/python-fuelclient}{Fuel-pythonclient}}
-\cvitem{Description}
-        {CLI for Fuel framework}
-\cvitem{Responsibilities}
-        {Supporting of the project's code. Code review}
+\cventry{2013}{Python Software Engineer}{Speedflow}{Kharkiv}{}{
+    Developing and supporting of the business logic for
+    {\href{http://speedflow.com/en/mediacore/overview}{Mediacore} project}}
+\cventry{2013--2015}{Python Software Engineer}{Mirantis}{Kharkiv}{}{
+    Developing of the \href{https://www.mirantis.com/products/mirantis-openstack-software/openstack-deployment-fuel/}{Fuel}
+    project and its supplementaries}
+\cventry{2015--present}{Python/Golang Software Engineer}{Mirantis}{Kharkiv}{}{
+    Working as a part of "SDN of Containers" team. Developing network related
+    projects (e.g.
+    \href{https://github.com/openstack/networking-calico}{Networking-Calico},
+    \href{https://github.com/Mirantis/k8s-externalipcontroller}{ExternalIPController},
+    \href{https://github.com/aateem/k8s-netchecker-server}{K8S-netchecker})}
 
 \section{Languages}
 \cvitemwithcomment{English}{Intermediate}{}
@@ -108,12 +65,12 @@
 \cvitemwithcomment{Russian}{Native}{}
 
 \section{Technical skills}
-\cvitem{Programming languages}{Python, Bash}
+\cvitem{Programming languages}{Python, Golang, Bash}
 \cvitem{OS}{GNU/Linux(Ubuntu/Debian/CentOS), MS Windows, Mac OS}
 \cvitem{Databases}{SQL, MongoDB, Redis}
 \cvitem{VCS}{Svn, Git}
-\cvitem{Libraries and frameworks}{Python Core, SQLAlchemy, Pecan, Web.py, Flask, Nose}
-\cvitem{Tools}{Vim, virtualenv, pdb, VirtualBox, Docker, Vagrant}
+\cvitem{Libraries and frameworks}{Python Core, SQLAlchemy, Pecan, Web.py, Flask, Nose, py.test, Golang Core, Ginkgo}
+\cvitem{Tools}{Vim, virtualenv, pdb, VirtualBox, Docker, Vagrant, Kubernetes, Travis CI, Kargo}
 
 \section{Interests}
 
