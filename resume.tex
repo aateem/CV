@@ -6,82 +6,90 @@
 
 % moderncv themes
 \moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{blue}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-
-% use custom skype icon, as \social collection does not
-% include it
-\newsavebox{\skypeicon}
-\savebox{\skypeicon}{\includegraphics[height=.8\baselineskip]{skype_grey.png}}
-\newcommand{\skypesocialsymbol}{\usebox{\skypeicon}}
+\moderncvcolor{grey}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 
 % adjust the page margins
 \usepackage[scale=0.75]{geometry}
+\usepackage{indentfirst}
 
 \name{Artem}{Roma}
-\title{Python/Golang Software Engineer}
-\address{Kharkiv}{Ukraine}
-\phone[mobile]{+380~(500)~470~891}
+\title{Software Engineer}
+\address{Lviv}{Ukraine}
+\phone[mobile]{+38~(050)~047~0891}
 \email{fuzzy.finder@gmail.com}
 \social[linkedin]{artem-roma}
 \social[github]{aateem}
-\extrainfo{\skypesocialsymbol~luiwampa}
-\photo[120pt][1pt]{photo.jpg}
+% \photo[120pt][1pt]{photo.jpg}
 
 % reload hyperref package with needed options
-\usepackage[unicode,colorlinks]{hyperref}
+% \usepackage[unicode,colorlinks]{hyperref}
 
 \begin{document}
 
 \makecvtitle
 
+\section{Profile}
+I am a skilled software engineer with 10 years of experience in building product platforms and web applications.
+Throughout my career, I have successfully delivered products in diverse and multicultural teams.
+
+I have a goal-oriented mindset and value the same in my colleagues.
+I enjoy deeply engaging with the product, understanding customer needs, and ensuring high-quality support after release.
+
+I am drawn to organizations that prioritize trust and transparency, as I believe they create a positive and collaborative work environment.
+
+\section{Technical Skills}
+\cvlistitem{Python, Go}
+\cvlistitem{FastAPI, Flask, SQLAlchemy, AsyncIO}
+\cvlistitem{Git}
+\cvlistitem{REST, GraphQL}
+\cvlistitem{Docker, Kubernetes, Flux CD}
+\cvlistitem{CircleCI, Jenkins}
+\cvlistitem{PostgreSQL, Redis}
+\cvlistitem{AWS - Lambda, Athena, S3, Glue, Redshift, Aurora, Kinesis, CloudWatch, Route53 etc.}
+\cvlistitem{Terraform}
+\cvlistitem{Graphana}
+
+\section{Experience}
+\cventry{2020--2023}{Sr. Software Engineer}{VGS}{}{}{
+\begin{itemize}%
+        \item Build a billing system for the product
+            \begin{itemize}%
+            \item billing models definition
+            \item data platfrom architecture and implementation
+            \item integration with the payment services providers
+            \item build web control portal for customers
+            \item build analytical dashboard service for customers
+            \end{itemize}
+        \item Develop product observability services
+        \item Develop a cloud (AWS) data warehouse solution
+\end{itemize}}
+\cventry{2017--2019}{Software Engineer}{DataRobot}{}{}{
+    Build a platform for the prediction model automation product.}
+\cventry{2017}{Software Engineer}{SoftServe Inc.}{}{}{
+    Build e-commerce platform for one of the company customers
+}
+\cventry{2013--2017}{Software Engineer}{Mirantis}{}{}{
+    Build a platfrom for OpenStack cluster management on customer infrastructure
+}
+\cventry{2013}{Software Engineer}{Speedflow}{}{}{
+    Build platform for VoIP class 4 softswitch product
+}
+
 \section{Education}
 \cventry{2008--2012}{BSc in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
 \cventry{2012--2013}{Specialist degree in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
 
-\subsection{Additional trainings}
-\cventry{2013}{Cloud Systems Techologies}{Mirantis}{Kharkiv}{}{}
-\cventry{2012--2013}{English language training courses}{American English Center}{Kharkiv}{}{}
-
-\section{Experience}
-
-\subsection{Vocational}
-\cventry{2013}{Python Software Engineer}{Speedflow}{Kharkiv}{}{
-    Developing and supporting of the business logic for
-    {\href{http://speedflow.com/en/mediacore/overview}{Mediacore} project}}
-\cventry{2013--2015}{Python Software Engineer}{Mirantis}{Kharkiv}{}{
-    Developing of the \href{https://www.mirantis.com/products/mirantis-openstack-software/openstack-deployment-fuel/}{Fuel}
-    project and its supplementaries}
-\cventry{2015--April of 2017}{Python/Golang Software Engineer}{Mirantis}{Kharkiv}{}{
-    Working as a part of "SDN of Containers" team. Developing network related
-    projects (e.g.
-    \href{https://github.com/openstack/networking-calico}{Networking-Calico},
-    \href{https://github.com/Mirantis/k8s-externalipcontroller}{ExternalIPController},
-    \href{https://github.com/aateem/k8s-netchecker-server}{K8S-netchecker})}
-\cventry{April of 2017--November of 2017}{Golang Software Engineer}{SoftServe Inc.}{Kharkiv}{}{
-    (Under NDA) Developing backend for a number of projects
-}
-\cventry{November of 2017--August of 2019}{Python Software Engineer}{DataRobot}{Kyiv}{}{
-    (Under NDA) Developing the platform for the product
-}
-
 \section{Languages}
 \cvitemwithcomment{English}{Upper-intermediate}{}
 \cvitemwithcomment{Ukrainian}{Native}{}
-\cvitemwithcomment{Russian}{Native}{}
-
-\section{Technical skills}
-\cvitem{Programming languages}{Python, Golang, Bash}
-\cvitem{OS}{GNU/Linux(Ubuntu/Debian/CentOS), MS Windows, Mac OS}
-\cvitem{Databases}{SQL, MongoDB, Redis}
-\cvitem{VCS}{Svn, Git}
-\cvitem{Libraries and frameworks}{Python Core, Click, SQLAlchemy, Pecan, Web.py, Flask, Nose, py.test, Golang Core, Ginkgo, Gorilla}
-\cvitem{Tools}{Vim, virtualenv, pdb, VirtualBox, Docker, Vagrant, Kubernetes, Travis CI, Kargo, Glide, supervisor, tmux, Ansible}
-\cvitem{CloudPlatforms}{AWS, GCP}
 
 \section{Interests}
-
-Scripting programming, network management, GNU/Linux administration,
-open-source projects, distributed systems, self education
+\cvlistitem{Product delivery}
+\cvlistitem{Distributed systems}
+\cvlistitem{Data intensive systems and data platforms}
+\cvlistitem{Observability}
+\cvlistitem{Developer tooling}
+\cvlistitem{Product management}
 
 \end{document}
