@@ -39,7 +39,7 @@ I enjoy deeply engaging with the product, understanding customer needs, and ensu
 I am drawn to organizations that prioritize trust and transparency, as I believe they create a positive and collaborative work environment.
 
 \section{Technical Skills}
-\cvlistitem{Python, Go}
+\cvlistitem{Python (Proficient), Go (Previous experience)}
 \cvlistitem{FastAPI, Flask, SQLAlchemy, AsyncIO}
 \cvlistitem{REST, GraphQL}
 \cvlistitem{Docker, Kubernetes, Flux CD}
@@ -50,26 +50,92 @@ I am drawn to organizations that prioritize trust and transparency, as I believe
 \cvlistitem{Graphana}
 
 \section{Experience}
-\cventry{2020--2023}{Sr. Software Engineer}{VGS}{}{}{
-\begin{itemize}%
-        \item Build a billing system for the product
+\cventry{2020--2023}{Very Good Security}{Platform/Services team}{Sr. Software Engineer}{Developing a platform for the payment processing and compliance assurance product}{
+    \begin{itemize}
+        \item Achievements
             \begin{itemize}%
-            \item billing models definition
-            \item data platfrom architecture and implementation
-            \item integration with the payment services providers
-            \item build web control portal for customers
-            \item build analytical dashboard service for customers
+                    \item Built the company billing system
+                        \begin{itemize}%
+                            \item designed the architecture for billing related part of the platform
+                            \item designed and implemented custom batch data processing micro-framework (Python)
+                            \item implemented support of 4 iterations of the company billing model
+                            \item implemented a variety of data connectors with PSPs and RevOps platforms.
+                            \item implemented a variety of back-end serviced to facilitate customer facing billing reporting and spending control functionality.
+                            \item designed and implemented a variety of the data processing flows for the internal business analytics purposes.
+                            \item automated a number of various manual billing book-keeping processes for the sales department.
+                            \item automated billing data integrity checks
+                        \end{itemize}
+                    \item Supported and extended the unified platform, e.g. implementation of the customer notification service and a compliance checker service, etc.
+                    \item Participated in the design, implementation, support and extension of a cloud based data warehouse solution.
             \end{itemize}
-        \item Develop product observability services
-        \item Develop a cloud (AWS) data warehouse solution
-\end{itemize}}
-\cventry{2017--2019}{Software Engineer}{DataRobot}{}{}{
-    Build a platform for the prediction model automation product}
-\cventry{2017}{Software Engineer}{SoftServe Inc.}{}{}{
-    Build e-commerce platform for one of the company customers
+        \item Responsibilities
+        \begin{itemize}
+            \item Processes
+                \begin{itemize}
+                    \item Participation in the quarterly and sprint planning and retrospectives
+                    \item Conducting company wide technical and product demos on the weekly basis
+                    \item Organizing communication with the stakeholders 
+                    \item Organizing cross-team activities for the technical delivery
+                \end{itemize}
+            \item Delivery 
+                \begin{itemize}
+                    \item Product finalization activites with the team product owner or external stakeholders (quarterly/sprint)
+                    \item Creating (documented) architecture design proposals - system/API/data schema design; SLA/SLO outline
+                    \item Technical implementation
+                        \begin{itemize}
+                            \item set up the source projects
+                            \item implement the functionality (using Python)
+                            \item add test coverage - functional/integration
+                            \item set CI/CD pipelines
+                            \item add technical documentation
+                        \end{itemize}
+                    \item Release
+                        \begin{itemize}
+                            \item add detailed SLA/SLO definition - setting resources and quotas
+                            \item add GitOps automation with the rollout strategy
+                            \item deployment to the environment (dev, prod) 
+                            \item add the monitoring and alerting
+                            \item set the smoke tests 
+                            \item verification with and feedback collection from the product stakeholders
+                            \item implement the user rollout strategy
+                            \item creating the customer facing documentation
+                        \end{itemize}
+                    \item Post release support ensuring the defined SLA/SLO
+                        \begin{itemize}
+                            \item create and participate in on-call schedules
+                            \item participate in the CS L2/L3 escalation rotations
+                        \end{itemize}
+                \end{itemize}
+            \end{itemize}
+        \item Technology stack and 3rd party
+            \begin{itemize}
+                \item AWS - S3, Athena, Glue, RDS, Aurora, Redshift, Kinesis (limited), EKS, Athena
+                \item Python - Flask, FastAPI, Boto3, HTTPX, Ariadne, Pytest, Poetry
+                \item Docker, docker-compose, Kubernetes, Helm, FluxCD
+                \item PostgreSQL, Redis, Presto
+                \item Vector, Kafka (limited)
+                \item CircleCI
+                \item Protobuf
+                \item OpenTelemetry, Prometheus, Graphana
+                \item Shell scripting
+                \item Stripe, RevOps, HealthCheck, PagerDuty, Rollbar, etc.
+            \end{itemize}
+    \end{itemize}
+}
+\cventry{2017--2019}{DataRobot}{Platform squad}{Software Engineer}{Focused development of the platform for the automated ML model training product}{
+    \begin{itemize}
+        \item Achievements
+            \begin{itemize}
+                \item Implemented the platform extension to support the Docker worker based environment
+                \item Optimized the in-house functional testing framework - reduced the time of the daily runs.
+                \item Automated migration of the ML models training data sets from a SQL based to time series data store.
+                \item Focused participation in design and implementation of the next version of the platform
+                \item Extended the next version of the platform to support the clean up actions for cloud based environments.
+            \end{itemize}
+    \end{itemize}
 }
 \cventry{2013--2017}{Software Engineer}{Mirantis}{}{}{
-    Build a platfrom for OpenStack cluster management on customer infrastructure
+    Build a platform for OpenStack cluster management on customer infrastructure
 }
 \cventry{2013}{Software Engineer}{Speedflow}{}{}{
     Build platform for VoIP class 4 softswitch product
