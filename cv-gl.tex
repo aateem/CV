@@ -1,0 +1,160 @@
+% possible options include:
+%   - font size ('10pt', '11pt' and '12pt');
+%   - paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape');
+%   - font family ('sans' and 'roman').
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}                        % style options are 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{grey}                          % color options 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+
+% adjust the page margins
+\usepackage[scale=0.75]{geometry}
+\usepackage{indentfirst}
+
+\name{Artem}{Roma}
+\title{Software Engineer}
+\address{Lviv}{Ukraine}
+\phone[mobile]{+38~(050)~047~0891}
+\email{fuzzy.finder@gmail.com}
+\social[linkedin]{artem-roma}
+\social[github]{aateem}
+% \photo[120pt][1pt]{photo.jpg}
+
+% reload hyperref package with needed options
+% \usepackage[unicode,colorlinks]{hyperref}
+
+\begin{document}
+
+\makecvtitle
+
+\section{Profile}
+\setlength{\parindent}{15pt} I am a skilled software engineer with 10 years of experience in building product platforms and web applications.
+Throughout my career, I have successfully delivered products in diverse and multicultural teams.
+
+I have a goal-oriented mindset and value the same in my colleagues.
+I enjoy deeply engaging with the product, understanding customer needs, and ensuring high-quality support after release.
+
+I am drawn to organizations that prioritize trust and transparency, as I believe they create a positive and collaborative work environment.
+
+\section{Technical Skills}
+\cvlistitem{Go, Python}
+\cvlistitem{Gin, FastAPI, Flask, SQLAlchemy, AsyncIO}
+\cvlistitem{REST, GraphQL}
+\cvlistitem{Docker, Kubernetes, Flux CD}
+\cvlistitem{CircleCI, Jenkins}
+\cvlistitem{PostgreSQL, Redis}
+\cvlistitem{AWS - Lambda, Athena, S3, Glue, Redshift, Aurora, Kinesis, CloudWatch, Route53 etc.}
+\cvlistitem{Terraform}
+\cvlistitem{Graphana}
+
+\section{Experience}
+\cventry{2020--2023}{Very Good Security}{Platform/Services team}{Sr. Software Engineer}{Developing a platform for the payment processing and compliance assurance product}{
+    \begin{itemize}
+        \item Achievements
+            \begin{itemize}%
+                    \item Built the company billing system
+                        \begin{itemize}%
+                            \item designed the architecture for billing related part of the platform
+                            \item designed and implemented custom batch data processing micro-framework (Python)
+                            \item implemented support of 4 iterations of the company billing model
+                            \item implemented a variety of data connectors with PSPs and RevOps platforms.
+                            \item implemented a variety of back-end serviced to facilitate customer facing billing reporting and spending control functionality.
+                            \item designed and implemented a variety of the data processing flows for the internal business analytics purposes.
+                            \item automated a number of various manual billing book-keeping processes for the sales department.
+                            \item automated billing data integrity checks
+                        \end{itemize}
+                    \item Implemented a compliance checker service.
+                    \item Participated in the design, implementation, support and extension of a cloud based data warehouse solution.
+            \end{itemize}
+        \item Technology stack and 3rd party
+            \begin{itemize}
+                \item AWS - S3, Athena, Glue, RDS, Aurora, Redshift, Kinesis (limited), EKS, Athena
+                \item Python - Flask, FastAPI, Boto3, HTTPX, Ariadne, Pytest, Poetry
+                \item Docker, docker-compose, Kubernetes, Helm, FluxCD
+                \item PostgreSQL, Redis, Presto
+                \item Vector, Kafka (limited)
+                \item CircleCI
+                \item Protobuf
+                \item OpenTelemetry, Prometheus, Graphana
+                \item Terraform 
+                \item Stripe, RevOps, HealthCheck, PagerDuty, Rollbar, etc.
+            \end{itemize}
+    \end{itemize}
+}
+\cventry{2017--2019}{DataRobot}{Platform squad}{Software Engineer}{Focused development of the platform for the automated ML model training product}{
+    \begin{itemize}
+        \item Achievements
+            \begin{itemize}
+                \item Implemented the platform extension to support the Docker worker based environment
+                \item Optimized the in-house functional testing framework - reduced the time of the daily runs.
+                \item Automated migration of the ML models training data sets from a SQL based to time series data store.
+                \item Focused participation in design and implementation of the next version of the platform
+                \item Extended the next version of the platform to support the clean up actions for cloud based environments.
+            \end{itemize}
+        \item Technology stack and 3rd party
+            \begin{itemize}
+                \item AWS - EC2, EKS
+                \item GCP - GKE
+                \item Docker, docker-compose, Kubernetes, helm
+                \item Python - stdlib, Pytest, Boto3
+                \item PostgreSQL, Redis
+                \item Logstash, ElasticSearch, Kibana
+                \item Linux packaging
+            \end{itemize}
+    \end{itemize}
+}
+\cventry{2017}{SoftServe Inc.}{}{Software Engineer in Golang}{Build an E-Commerce Platform}{
+    \begin{itemize}
+        \item Achievements
+            \begin{itemize}
+                \item Designed and built a high-load e-commerce platform.
+            \end{itemize}
+        \item Technology stack and 3rd party
+            \begin{itemize}
+                \item Go - Gin, Gingko, Templating, SQL.
+                \item Docker, docker-compose, Kubernetes
+                \item PostgreSQL
+                \item Logstash, ElasticSearch, Kibana
+            \end{itemize}
+    \end{itemize}
+}
+\cventry{2013--2017}{Mirantis}{Fuel RnD team}{Software Engineer [Go, Python]}{Build a platform for OpenStack cluster management on customer infrastructure}{
+    \begin{itemize}
+        \item Achievements
+            \begin{itemize}
+                \item Implemented a Kubernetes operator for managing custom IP address assignment
+                \item Implemented the connectivity check component for the Kubernetes installation framework
+                \item Integrated a variety of test drivers for the OpenStack cluster testing component
+                \item Implemented custom IP address management extension for a network manager component of the Fuel framework
+            \end{itemize}
+        \item Technology stack and 3rd party
+            \begin{itemize}
+                \item Go - network programming, Kubernetes API SDK. 
+                \item Project Calico - network mesh. 
+                \item Python - stdlib, Pytest, nosetest, network programming
+                \item OpenStack
+                \item Docker, docker-compose, Kubernetes, helm
+            \end{itemize}
+    \end{itemize}
+}
+\cventry{2013}{Speedflow}{Communications team}{Software Engineer}{Build platform for VoIP class 4 softswitch product}{NDA}
+
+\section{Education}
+\cventry{2012--2013}{Specialist degree in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
+\cventry{2008--2012}{BSc in Computer Engineering}{Kharkiv National University of Radio and Electronics}{}{}{}
+
+\section{Languages}
+\cvitemwithcomment{English}{Upper-intermediate}{}
+\cvitemwithcomment{Ukrainian}{Native}{}
+
+\section{Interests}
+\cvlistitem{Product delivery}
+\cvlistitem{Distributed systems}
+\cvlistitem{Data intensive systems and data platforms}
+\cvlistitem{Observability}
+\cvlistitem{Developer tooling}
+\cvlistitem{Product management}
+
+\end{document}
